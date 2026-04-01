@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GRU</title>
-    <link rel="shortcut icon" href="./assets/imgs/favicon.svg" type="image/x-icon">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
-    />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <div class="navbar h-padding">
-      <div class="navbar-logo">
-        <span>GRU</span>
-      </div>
 
-      <div class="navbar-menu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GRU</title>
+  <link rel="shortcut icon" href="./assets/imgs/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center rounded-5 shadow px-4 py-2 my-4">
+      <div class="navbar-logo">
+        <a href="#"><strong class="fs-5">GRU</strong></a>
+      </div>
+      <div class="navbar-menu d-none d-md-flex gap-3">
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="">Resume</a>
         <a href="#">Services</a>
         <div class="dropdown">
-          <a href="#" class="dropbtn"
-            >Dropdown
+          <a href="#" class="dropbtn">Dropdown
             <span class="material-symbols-outlined"> keyboard_arrow_down </span>
           </a>
           <div class="dropdown-content">
@@ -35,399 +35,528 @@
         </div>
         <a href="#">Contact</a>
       </div>
-
-      <div class="navbar-social">
+      <div class="navbar-actions">
         <a href="#"><i class="fab fa-x-twitter"></i></a>
         <a href="#"><i class="fab fa-facebook"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
+  </div>
 
-    <section class="hero h-padding">
-      <div class="hero-content">
-        <div class="text-content">
-          <h1>Crafting Digital<br />Experiences with Passion</h1>
-          <p>
-            Transforming ideas into elegant solutions through creative design
-            and innovative development
-          </p>
-          <div class="rounded-buttons">
-            <a href="#" class="btn primary">View My Work</a>
-            <a href="#" class="btn secondary">Let's Connect</a>
-          </div>
-          <div class="stats">
-            <div><strong>5+</strong><span>Years Experience</span></div>
-            <div><strong>100+</strong><span>Projects Completed</span></div>
-            <div><strong>50+</strong><span>Happy Clients</span></div>
-          </div>
+  <!-- Hero -->
+  <section class="container mb-4">
+    <div class="row">
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center gap-2">
+        <h1>Crafting Digital<br />Experiences with Passion</h1>
+        <p>
+          Transforming ideas into elegant solutions through creative design
+          and innovative development
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-3">
+          <a href="#" class="my-main-btn">View My Work</a>
+          <a href="#" class="my-sec-btn">Let's Connect</a>
         </div>
-        <div class="image-content">
-          <img
-            src="https://static.wixstatic.com/media/a6d203_17e12e09710743f09192c401171ff557~mv2.png/v1/fill/w_670,h_525,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a6d203_17e12e09710743f09192c401171ff557~mv2.png"
-            alt="Designer at work"
-          />
+        <div class="stats">
+          <div><strong>5+</strong><span>Years Experience</span></div>
+          <div><strong>100+</strong><span>Projects Completed</span></div>
+          <div><strong>50+</strong><span>Happy Clients</span></div>
         </div>
       </div>
-    </section>
+      <div class="col-12 col-md-6 image-content d-none d-md-block">
+        <img src="./assets/imgs/tdisgner.png" alt="Designer at work">
+      </div>
+    </div>
+  </section>
 
-    <section class="about section">
-      <div class="h-padding">
-        <div class="section-header">
-          <p class="section-title">About</p>
-          <p class="section-subtitle">
-            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-            quam nihil molestiae consequatur vel illum qui dolorem
-          </p>
+  <!-- About -->
+  <section class="about section py-3">
+    <div class="container">
+      <div class="section-header">
+        <p class="title">About</p>
+        <p>
+          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+          quam nihil molestiae consequatur vel illum qui dolorem
+        </p>
+      </div>
+      <div class="row mb-3 mb-lg-0">
+        <!-- Left: Image -->
+        <div class="col-4">
+          <img class="rounded-5" src="assets/imgs/profile.jpg" alt="Eliot Johnson" />
         </div>
-        <div class="about-container">
-          <!-- Left: Image -->
-          <div class="about-image">
-            <img src="assets/imgs/profile.jpg" alt="Eliot Johnson" />
-          </div>
-          <!-- Right: Content -->
-          <div class="about-info">
-            <p class="about-label">About Me</p>
+        <!-- Right: Content -->
+        <div class="col-8">
+          <div>
+            <p>About Me</p>
             <h3>UI/UX Designer & Web Developer</h3>
-            <p class="about-desc">
+            <p>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni dolores eos qui ratione
               voluptatem sequi nesciunt.
             </p>
-            <p class="about-desc-sm">
+            <p>
               Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet
             </p>
             <!-- Details card -->
-            <div class="about-card">
-              <div class="row">
-                <div><span>Name</span><b>Eliot Johnson</b></div>
-                <div><span>Phone</span><b>+123 456 7890</b></div>
+            <div class="mb-3 d-none d-lg-flex about-info-card-mobile">
+              <div class="col-6">
+                <div><span>Name</span>
+                  <p class="fw-bold">Eliot Johnson</p>
+                </div>
+                <div><span>Phone</span>
+                  <div><a href="tel:+123 456 7890" class="fw-bold">
+                      <p class="d-inline-flex">+123 456 7890</p>
+                    </a></div>
+                </div>
+                <div><span>Age</span>
+                  <p class="fw-bold">26 Years</p>
+                </div>
               </div>
-              <div class="row">
-                <div><span>Age</span><b>26 Years</b></div>
-                <div><span>Email</span><b>email@example.com</b></div>
-              </div>
-              <div class="row">
-                <div><span>Occupation</span><b>Lorem Engineer</b></div>
-                <div><span>Nationality</span><b>Ipsum</b></div>
+              <div class="col-6">
+                <div><span>Email</span>
+                  <div><a href="mailto:email@example.com" class="fw-bold">
+                      <p class="d-inline-flex">email@example.com</p>
+                    </a></div>
+                </div>
+                <div><span>Occupation</span>
+                  <p class="fw-bold">Lorem Engineer</p>
+                </div>
+                <div><span>Nationality</span>
+                  <p class="fw-bold">Ipsum</p>
+                </div>
               </div>
             </div>
             <!-- Signature -->
-            <p class="about-sign">
+            <p class="d-none d-lg-block">
               Eliot Johnson<br /><span>Adipiscing Elit, Lorem Ipsum</span>
             </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="skills h-padding section">
-      <div class="skill-card">
-        <h4>HTML</h4>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
-        <div>
-          <span class="percent">90%</span>
-          <div class="progress">
-            <div class="progress-bar" style="width: 90%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h4>CSS</h4>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
-        <div>
-          <span class="percent">90%</span>
-          <div class="progress">
-            <div class="progress-bar" style="width: 90%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h4>JavaScript</h4>
-        <p>Neque porro quisquam est qui dolorem ipsum quia dolor.</p>
-        <div>
-          <span class="percent">80%</span>
-          <div class="progress">
-            <div class="progress-bar" style="width: 80%"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="skill-card">
-        <h4>Photoshop</h4>
-        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p>
-        <div>
-          <span class="percent">55%</span>
-          <div class="progress">
-            <div class="progress-bar" style="width: 55%"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="portfolio h-padding section">
-      <div class="section-header">
-        <p class="section-title">Protfolio</p>
-        <p class="section-subtitle">
-          Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-          quam nihil molestiae consequatur vel illum qui dolorem
-        </p>
-      </div>
-      <div class="category">
-        <img
-          src="https://unitrex.com/cdn/shop/files/Rectangle_14_4.png?crop=center&v=1724850762&width=760"
-          alt="Web Design"
-        />
-        <div class="category-info">
-          <p class="category-title">Web Design</p>
-          <p class="category-subtitle">Modern Dashboard Interface</p>
-          <p class="category-desc">
-            Maecenas faucibus mollis interdum sed posuere consectetur est at
-            lobortis.
-          </p>
-        </div>
-      </div>
-      <div class="category">
-        <img
-          src="https://e0.pxfuel.com/wallpapers/164/230/desktop-wallpaper-plant-green-hydrangea-pink-flower-minimalist-spring-thumbnail.jpg"
-          alt="Graphics"
-        />
-        <div class="category-info">
-          <p class="category-title">Graphics</p>
-          <p class="category-subtitle">Creative Brand Identity</p>
-          <p class="category-desc">
-            Vestibulum id ligula porta felis euismod semper at vulputate.
-          </p>
-        </div>
-      </div>
-      <div class="category">
-        <img
-          src="https://i0.wp.com/hellosimple.ca/wp-content/uploads/2025/01/pexels-photo-803929.jpeg?fit=768,511&ssl=1"
-          alt="Motion"
-        />
-        <div class="category-info">
-          <p class="category-title">Motion</p>
-          <p class="category-subtitle">Product Animation Reel</p>
-          <p class="category-desc">
-            Donec ullamcorper nulla non metus auctor fringilla dapibus.
-          </p>
-        </div>
-      </div>
-      <div class="category">
-        <img
-          src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR8iO78E5sXTBNz4r1gcJRxaOY06PZQVwc2enIywpLLkpsXsaVs"
-          alt="Branding"
-        />
-        <div class="category-info">
-          <p class="category-title">Branding</p>
-          <p class="category-subtitle">Luxury Brand Package</p>
-          <p class="category-desc">
-            Aenean lacinia bibendum nulla sed consectetur elit.
-          </p>
-        </div>
-      </div>
-      <div class="category">
-        <img
-          src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/f6/6d/ea/f66dea75-1588-a073-df26-322953f7f66c/mza_8717396148272345156.jpg/1200x1200bf.webp"
-          alt="Branding"
-        />
-        <div class="category-info">
-          <p class="category-title">WEB DESIGN</p>
-          <p class="category-subtitle">E-commerce Platform</p>
-          <p class="category-desc">
-            Nullam id dolor id nibh ultricies vehicula ut id elit.
-          </p>
-        </div>
-      </div>
-      <div class="category">
-        <img
-          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ4D5f51C9RaVdtgE6XBRZwvfERvzbkKbqQer3rDPbbhnUC4L5Y"
-          alt="Branding"
-        />
-        <div class="category-info">
-          <p class="category-title">GRAPHICS</p>
-          <p class="category-subtitle">Digital Art Collection</p>
-          <p class="category-desc">
-            Cras mattis consectetur purus sit amet fermentum.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="testimonials section">
-      <div class="h-padding">
-        <div class="section-header">
-          <p class="section-title">Testimonials</p>
-          <p class="section-subtitle">
-            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-            quam nihil molestiae consequatur vel illum qui dolorem
-          </p>
-        </div>
-        <section class="testimonials">
-          <div class="testimonial-card">
-            <div class="testimonial-card-info">
-              <h3>Nemo enim ipsam voluptatem</h3>
-              <p>
-                "Export tempor illum tamen malis malis eram quae irure esse
-                labore quem cillum quid cillum eram malis quorum velit fore eram
-                velit sunt aliqua noster fugiat irure amet legam anim culpa."
-              </p>
-              <p>
-                Dolorem excepturi esse qui amet maxime quibusdam aut repellendus
-                voluptatum. Corrupti enim a repellat cumque est laborum fuga
-                consequuntur. Dolorem nostrum deleniti quas voluptatem iure
-                dolorum rerum. Repudiandae doloribus ut repellat harum vero aut.
-                Modi aut velit aperiam aspernatur odit ut vitae.
-              </p>
-              <div class="testimonial-card-info-contact">
-                <img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAy_pgGh8QtT5hV4UXHVp0M0yNuMDCtANoBkYAPB29PD7LEG3"
-                  alt=""
-                />
-                <div>
-                  <h3>Sara Wilsson</h3>
-                  <span>Designer</span>
-                </div>
-              </div>
+      <!-- Details card Mobile -->
+      <div class="container">
+        <div class="row about-info-card-mobile d-lg-none">
+          <div class="col-6">
+            <div class="d-flex flex-column gap-1">
+              <div><span class="label">Name:</span><b>Eliot Johnson</b></div>
+              <div><span class="label">Phone:</span><b>+123 456 7890</b></div>
+              <div><span class="label">Age:</span><b>26 Years</b></div>
             </div>
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAy_pgGh8QtT5hV4UXHVp0M0yNuMDCtANoBkYAPB29PD7LEG3"
-              alt="Sara Wilsson"
-            />
           </div>
-        </section>
-        <div class="arrows">
-          <a href="" class="testimonials-btns"
-            ><span class="material-symbols-outlined">
-              keyboard_arrow_left
-            </span></a
-          >
-          <a href="" class="testimonials-btns"
-            ><span class="material-symbols-outlined">
-              keyboard_arrow_right
-            </span></a
-          >
+          <div class="col-6">
+            <div class="d-flex flex-column justify-content-center gap-1">
+              <div><span class="label">Email:</span><b>email@example.com</b></div>
+              <div><span class="label">Occupation:</span><b>Lorem Engineer</b></div>
+              <div><span class="label">Nationality:</span><b>Ipsum</b></div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="services h-padding section">
+      <!-- Signature Mobile-->
+      <p class="d-lg-none">
+        Eliot Johnson<br /><span class="text-muted">Adipiscing Elit, Lorem Ipsum</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- 1 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="skill-card mx-4 mx-sm-0">
+          <h4>HTML</h4>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+          <span>90%</span>
+          <div class="progress-bar" style="width: 90%;"></div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="skill-card mx-4 mx-sm-0">
+          <h4>CSS</h4>
+          <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur.</p>
+          <span class="percent">90%</span>
+          <div class="progress-bar" style="width: 90%;"></div>
+
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="skill-card mx-4 mx-sm-0">
+          <h4>JavaScript</h4>
+          <p>Neque porro quisquam est qui dolorem ipsum quia dolor.</p>
+          <span class="percent">80%</span>
+          <div class="progress-bar" style="width: 80%;"></div>
+
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="skill-card mx-4 mx-sm-0">
+          <h4>Photoshop</h4>
+          <p>Quis autem vel eum iure reprehenderit qui in ea voluptate.</p>
+          <span class="percent">55%</span>
+          <div class="progress-bar" style="width: 55%;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio -->
+  <section class="container mb-5">
+    <div class="section-header">
+      <p class="title">Portfolio</p>
+      <p>
+        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+        quam nihil molestiae consequatur vel illum qui dolorem
+      </p>
+    </div>
+    <div>
+      <div class="row g-4">
+        <!-- Category Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="category-card">
+            <div class="ratio ratio-4x3 mb-3">
+              <img src="https://unitrex.com/cdn/shop/files/Rectangle_14_4.png?crop=center&v=1724850762&width=760"
+                alt="Web Design" class="img-fluid rounded object-fit-cover w-100 h-100" />
+            </div>
+            <p class="text-main fs-6 fw-bold mb-1">Web Design</p>
+            <p class="fw-bold text-muted mb-2">Modern Dashboard Interface</p>
+            <p class="mb-0">
+              Maecenas faucibus mollis interdum sed posuere consectetur est at lobortis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="category-card">
+            <div class="ratio ratio-4x3 mb-3">
+              <img
+                src="https://e0.pxfuel.com/wallpapers/164/230/desktop-wallpaper-plant-green-hydrangea-pink-flower-minimalist-spring-thumbnail.jpg"
+                alt="Web Design" class="img-fluid rounded object-fit-cover w-100 h-100" />
+            </div>
+            <p class="text-main fs-6 fw-bold mb-1">Graphics</p>
+            <p class="fw-bold text-muted mb-2">Creative Brand Identity</p>
+            <p class="mb-0">
+              Vestibulum id ligula porta felis euismod semper at vulputate.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="category-card">
+            <div class="ratio ratio-4x3 mb-3">
+              <img
+                src="https://assets-global.website-files.com/63221ff398499f47e0abbec8/63bc03c8a5ebab74d6a1b1fa_DCC-Photo-0069.webp"
+                alt="Web Design" class="img-fluid rounded object-fit-cover w-100 h-100" />
+            </div>
+            <p class="text-main fs-6 fw-bold mb-1">Motion</p>
+            <p class="fw-bold text-muted mb-2">Product Animation Reel</p>
+            <p class="mb-0">
+              Donec ullamcorper nulla non metus auctor fringilla dapibus.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="category-card">
+            <div class="ratio ratio-4x3 mb-3">
+              <img
+                src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR8iO78E5sXTBNz4r1gcJRxaOY06PZQVwc2enIywpLLkpsXsaVs"
+                alt="Web Design" class="img-fluid rounded object-fit-cover w-100 h-100" />
+            </div>
+            <p class="text-main fs-6 fw-bold mb-1">Branding</p>
+            <p class="fw-bold text-muted mb-2">Luxury Brand Package</p>
+            <p class="mb-0">
+              Aenean lacinia bibendum nulla sed consectetur elit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="category-card">
+            <div class="ratio ratio-4x3 mb-3">
+              <img
+                src="https://is1-ssl.mzstatic.com/image/thumb/Podcasts115/v4/f6/6d/ea/f66dea75-1588-a073-df26-322953f7f66c/mza_8717396148272345156.jpg/1200x1200bf.webp"
+                alt="Web Design" class="img-fluid rounded object-fit-cover w-100 h-100" />
+            </div>
+            <p class="text-main fs-6 fw-bold mb-1">WEB DESIGN</p>
+            <p class="fw-bold text-muted mb-2">E-commerce Platform</p>
+            <p class="mb-0">
+              Nullam id dolor id nibh ultricies vehicula ut id elit.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Item -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="category-card">
+            <div class="ratio ratio-4x3 mb-3">
+              <img
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ4D5f51C9RaVdtgE6XBRZwvfERvzbkKbqQer3rDPbbhnUC4L5Y"
+                alt="Web Design" class="img-fluid rounded object-fit-cover w-100 h-100" />
+            </div>
+            <p class="text-main fs-6 fw-bold mb-1">GRAPHICS</p>
+            <p class="fw-bold text-muted mb-2">Digital Art Collection</p>
+            <p class="mb-0">
+              Cras mattis consectetur purus sit amet fermentum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section py-5">
+    <div class="container">
+      <!-- Header -->
       <div class="section-header">
-        <p class="section-title">Services</p>
-        <p class="section-subtitle">
+        <p class="title">Testimonials</p>
+        <p>
           Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
           quam nihil molestiae consequatur vel illum qui dolorem
         </p>
       </div>
-      <div class="services-content">
-        <div class="services-text-content">
-          <h2>Consectetur adipiscing elit sed do eiusmod tempor</h2>
-          <p>
-            Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
-            volutpat velit class aptent taciti sociosqu ad litora.
+
+      <!-- Card -->
+      <div class="row bg-white p-4 rounded-5 mb-4 flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-6 testimonial-card-info">
+          <h3 class="fs-3 mb-2">Nemo enim ipsam voluptatem</h3>
+          <p class="fst-italic">
+            "Export tempor illum tamen malis malis eram quae irure esse
+            labore quem cillum quid cillum eram malis quorum velit fore eram
+            velit sunt aliqua noster fugiat irure amet legam anim culpa."
           </p>
-          <div class="rounded-button">
-            <a href="#" class="btn secondary">See all services</a>
+          <p class="fst-italic mb-4">
+            Dolorem excepturi esse qui amet maxime quibusdam aut repellendus
+            voluptatum. Corrupti enim a repellat cumque est laborum fuga
+            consequuntur. Dolorem nostrum deleniti quas voluptatem iure
+            dolorum rerum. Repudiandae doloribus ut repellat harum vero aut.
+            Modi aut velit aperiam aspernatur odit ut vitae.
+          </p>
+          <div class="d-flex gap-2">
+            <div class="rounded-5">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAy_pgGh8QtT5hV4UXHVp0M0yNuMDCtANoBkYAPB29PD7LEG3"
+                alt="" style="width: 3rem; height: 3rem;" />
+            </div>
+            <div>
+              <h3>Sara Wilsson</h3>
+              <span>Designer</span>
+            </div>
           </div>
         </div>
-        <div class="services-cards-content">
-          <div class="service-card">
-            <span class="material-symbols-outlined"> planner_review </span>
-            <p class="title">Eget nulla facilisi etiam</h4>
-            <p class="desc">
-              Vestibulum morbi blandit cursus risus at ultrices mi tempus
-              imperdiet nulla.
-            </p>
-          </div>
-          <div class="service-card">
-            <span class="material-symbols-outlined"> jamboard_kiosk </span>
-            <p class="title">Duis aute irure dolor</p>
-            <p class="desc">
-              Auctor neque vitae tempus quam pellentesque nec nam aliquam sem et
-              tortor.
-            </p>
-          </div>
-          <div class="service-card">
-            <span class="material-symbols-outlined"> podcasts </span>
-            <p class="title">Excepteur sint occaecat</p>
-            <p class="desc">
-              At vero eos et accusamus et iusto odio dignissimos ducimus qui
-              blanditiis praesentium.
-            </p>
-          </div>
-          <div class="service-card">
-            <span class="material-symbols-outlined"> linked_services </span>
-            <p class="title">Tempor incididunt ut labore</p>
-            <p class="desc">
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute
-              irure dolor.
-            </p>
+        <div class="col-12 col-md-6 rounded-5 mb-3 mb-md-0">
+          <div class="rounded-5 overflow-hidden">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAy_pgGh8QtT5hV4UXHVp0M0yNuMDCtANoBkYAPB29PD7LEG3&s"
+              alt="Sara Wilsson" class="w-100 h-100 object-fit-cover" />
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="contact section">
-      <div class="h-padding">
-        <p>CONTACT</p>
-        <h2>Nemo enim ipsam voluptatem quia voluptas aspernatur</h2>
-        <p>
-          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-          suscipit laboriosam.
+      <!-- Navigation -->
+      <div class="d-flex justify-content-center align-items-center gap-2">
+        <a href="" class="d-flex justify-content-center align-items-center border rounded-5"><span
+            class="material-symbols-outlined text-dark fs-1 p-0">
+            keyboard_arrow_left
+          </span></a>
+        <a href="" class="d-flex justify-content-center align-items-center border rounded-5"><span
+            class="material-symbols-outlined text-dark fs-1 p-0">
+            keyboard_arrow_right
+          </span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="py-4 container">
+    <div class="section-header">
+      <p class="title">Services</p>
+      <p>
+        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+        quam nihil molestiae consequatur vel illum qui dolorem.
+      </p>
+    </div>
+    <div class="row align-items-center">
+      <!-- Left Text Content -->
+      <div class="col-12 col-lg-5">
+        <h3 class="fw-bold fs-5">
+          Consectetur adipiscing elit sed do eiusmod tempor
+        </h3>
+        <p class="text-muted my-3">
+          Nulla metus metus ullamcorper vel tincidunt sed euismod nibh
+          volutpat velit class aptent taciti sociosqu ad litora.
         </p>
-        <div class="contact-details">
-          <p>
-            <span class="material-symbols-outlined"> email </span>
-            info@example.com
-          </p>
-          <p>
-            <span class="material-symbols-outlined"> Phone </span> +1 5589 55488
-            558
-          </p>
-          <p>
-            <span class="material-symbols-outlined"> location_on </span> A108
-            Adam Street, New York, NY 535022
-          </p>
-        </div>
-        <a href="#" class="map-link"
-          >Open Map
-          <span class="material-symbols-outlined"> arrow_forward </span>
+        <a href="#" class="my-sec-btn d-none d-md-inline-block">
+          See all services
         </a>
       </div>
-    </section>
-
-    <footer class="footer">
-      <p>© Copyright <b>Gru</b>. All Rights Reserved</p>
-      <div class="social-icons">
-        <div class="footer-social-icon">
-          <a href="#" class="icon"><i class="fab fa-x-twitter"></i></a>
-        </div>
-        <div class="footer-social-icon">
-          <a href="#" class="icon"><i class="fab fa-facebook"></i></a>
-        </div>
-        <div class="footer-social-icon">
-          <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
-        </div>
-        <div class="footer-social-icon">
-          <a href="#" class="icon"><i class="fab fa-linkedin"></i></a>
+      <!-- Services Cards -->
+      <div class="col-12 col-lg-7">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-sm-6">
+            <div class="service-card">
+              <span class="material-symbols-outlined s-icon">
+                planner_review
+              </span>
+              <h5>Eget nulla facilisi etiam</h5>
+              <p class="text-muted mb-0">
+                Vestibulum morbi blandit cursus risus at ultrices mi tempus
+                imperdiet nulla.
+              </p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-12 col-sm-6">
+            <div class="service-card">
+              <span class="material-symbols-outlined s-icon">
+                jamboard_kiosk
+              </span>
+              <h5>Duis aute irure dolor</h5>
+              <p class="text-muted mb-0">
+                Auctor neque vitae tempus quam pellentesque nec nam aliquam sem et
+                tortor.
+              </p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-12 col-sm-6">
+            <div class="service-card">
+              <span class="material-symbols-outlined s-icon">
+                podcasts
+              </span>
+              <h5>Excepteur sint occaecat</h5>
+              <p class="text-muted mb-0">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                blanditiis praesentium.
+              </p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-12 col-sm-6">
+            <div class="service-card">
+              <span class="material-symbols-outlined s-icon">
+                linked_services
+              </span>
+              <h5>Tempor incididunt ut labore</h5>
+              <p class="text-muted mb-0">
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute
+                irure dolor.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-      <p>Designed by <span style="color: #e87532">Gru</span></p>
-      <a href="#" class="scroll-top">
-        <span class="material-symbols-outlined"> arrow_upward </span>
-      </a>
-    </footer>
-    <script
-      src="https://kit.fontawesome.com/YOUR_KIT_CODE.js"
-      crossorigin="anonymous"
-    ></script>
+    </div>
+    <!-- Mobile -->
+    <center>
+      <button href="#" class="my-sec-btn d-md-none">
+        See all services
+      </button>
+    </center>
+  </section>
 
-    <!-- Font Awesome CDN (for social icons) -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </body>
+  <!-- Contact -->
+  <section class="contact py-4">
+    <div class="container">
+      <p>CONTACT</p>
+      <p class="fw-bold fs-3">Nemo enim ipsam voluptatem quia voluptas aspernatur</p>
+      <p class="text-muted">
+        Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+        suscipit laboriosam.
+      </p>
+
+      <div class="d-flex flex-column align-items-start gap-2">
+        <div class="d-flex align-items-center gap-1">
+          <span class="material-symbols-outlined text-main"> email </span>
+          <a href="mailto:info@example.com">info@example.com</a>
+        </div>
+        <div class="d-flex align-items-center gap-1">
+          <span class="material-symbols-outlined text-main"> Phone </span>
+          <a href="tel:+1558955488558">+1 5589 554 88558</a>
+        </div>
+        <div class="d-flex align-items-center gap-1">
+          <span class="material-symbols-outlined text-main"> location_on </span>
+          <a href="https://www.google.com/maps/search/?api=1&query=A108+Adam+Street,+New+York,+NY+535022"
+            target="_blank">
+            A108 Adam Street, New York, NY 535022
+          </a>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=A108+Adam+Street,+New+York,+NY+535022" target="_blank"
+          class="d-inline-flex align-items-center gap-1 open-map-link">
+          <span class="fw-semibold">Open Map</span>
+          <span class="material-symbols-outlined arrow">arrow_forward</span>
+        </a>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <footer class="d-flex flex-column align-items-center gap-2 py-4">
+    <p class="m-0">© Copyright <a href=""><b>Gru</b></a>. All Rights Reserved</p>
+    <div class="d-flex justify-content-center gap-3">
+
+      <a href="#" class="social-btn border rounded-5">
+        <span class="fab fa-x-twitter icon"></span>
+      </a>
+
+      <a href="#" class="social-btn border rounded-5">
+        <span class="fab fa-facebook icon"></span>
+      </a>
+
+      <a href="#" class="social-btn border rounded-5">
+        <span class="fab fa-instagram icon"></span>
+      </a>
+
+      <a href="#" class="social-btn border rounded-5">
+        <span class="fab fa-linkedin icon"></span>
+      </a>
+    </div>
+    <p class="m-0">Designed by <a href="" style="color: #e87532">Gru</a></p>
+  </footer>
+
+  <button id="goTopBtn" class="d-flex justify-content-center align-items-center">
+    <span class="material-symbols-outlined"> keyboard_arrow_up </span>
+  </button>
+
+  <script>
+    const btn = document.getElementById("goTopBtn");
+
+    // Show button when scrolling down
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        btn.classList.add("show");
+      } else {
+        btn.classList.remove("show");
+      }
+    });
+
+    // Scroll to top when clicked
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+
+  <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Font Awesome CDN (for social icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</body>
+
 </html>
