@@ -189,6 +189,7 @@ body {
     background-color: #FAF9FB;
 }
 
+.about-info-card,
 .about-info-card-mobile {
     background-color: white;
     border-radius: 1rem;
@@ -203,7 +204,10 @@ body {
     margin: 0;
 }
 
-.about-info-card-mobile .data {}
+.about-info-card-mobile .data {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+}
 
 .about-info h3 {
     color: #0f172a;
@@ -221,7 +225,7 @@ body {
 
 @media (max-width: 576px) {
     .service-card {
-        margin-inline: 4rem;
+        margin-inline: .2rem;
     }
 }
 
