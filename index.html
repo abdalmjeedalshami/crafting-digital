@@ -57,11 +57,21 @@
           <a href="#" class="my-main-btn">View My Work</a>
           <a href="#" class="my-sec-btn">Let's Connect</a>
         </div>
+
+
         <div class="stats">
-          <div><strong>5+</strong><span>Years Experience</span></div>
-          <div><strong>100+</strong><span>Projects Completed</span></div>
-          <div><strong>50+</strong><span>Happy Clients</span></div>
+          <div class="stat">
+            <strong data-target="5">0</strong><span>Years Experience</span>
+          </div>
+          <div class="stat">
+            <strong data-target="100">0</strong><span>Projects Completed</span>
+          </div>
+          <div class="stat">
+            <strong data-target="50">0</strong><span>Happy Clients</span>
+          </div>
         </div>
+
+
       </div>
       <div class="col-12 col-md-6 image-content d-none d-md-block">
         <img src="./assets/imgs/tdisgner.png" alt="Designer at work">
@@ -113,10 +123,13 @@
                 </div>
               </div>
               <div class="col-6">
-                <div><span>Email</span>
-                  <div><a href="mailto:email@example.com" class="fw-bold">
+                <div>
+                  <span>Email</span>
+                  <div>
+                    <a href="mailto:email@example.com" class="fw-bold">
                       <p class="d-inline-flex">email@example.com</p>
-                    </a></div>
+                    </a>
+                  </div>
                 </div>
                 <div><span>Occupation</span>
                   <p class="fw-bold">Lorem Engineer</p>
@@ -136,19 +149,42 @@
 
       <!-- Details card Mobile -->
       <div class="container">
-        <div class="row about-info-card-mobile d-lg-none">
-          <div class="col-6">
-            <div class="d-flex flex-column gap-1">
-              <div><span class="label">Name:</span><b>Eliot Johnson</b></div>
-              <div><span class="label">Phone:</span><b>+123 456 7890</b></div>
-              <div><span class="label">Age:</span><b>26 Years</b></div>
+        <div class="row gap-3 about-info-card-mobile d-lg-none">
+          <div class="col-12 col-md-6">
+            <div class="d-flex flex-column gap-3">
+
+              <div>
+                <p class="label">Name:</p>
+                <b class="data">Eliot Johnson</b>
+              </div>
+
+              <div>
+                <p class="label">Phone:</p>
+                <b class="data">+123 456 7890</b>
+              </div>
+
+              <div>
+                <p class="label">Age:</p>
+                <b class="data">26 Years</b>
+              </div>
+
             </div>
           </div>
-          <div class="col-6">
-            <div class="d-flex flex-column justify-content-center gap-1">
-              <div><span class="label">Email:</span><b>email@example.com</b></div>
-              <div><span class="label">Occupation:</span><b>Lorem Engineer</b></div>
-              <div><span class="label">Nationality:</span><b>Ipsum</b></div>
+
+          <div class="col-12 col-md-6">
+            <div class="d-flex flex-column gap-3">
+              <div>
+                <p class="label">Email:</p>
+                <b class="data">email@example.com</b>
+              </div>
+              <div>
+                <p class="label">Occupation:</p>
+                <b class="data">Lorem Engineer</b>
+              </div>
+              <div>
+                <p class="label">Nationality:</p>
+                <b class="data">Ipsum</b>
+              </div>
             </div>
           </div>
         </div>
@@ -533,6 +569,42 @@
   <button id="goTopBtn" class="d-flex justify-content-center align-items-center">
     <span class="material-symbols-outlined"> keyboard_arrow_up </span>
   </button>
+
+  <script>
+    const counters = document.querySelectorAll(".stat strong");
+    let started = false; // prevent repeated animation
+
+    function startCounter() {
+      if (started) return;
+      started = true;
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute("data-target");
+        const speed = 200; // smaller = faster
+
+        const updateCounter = () => {
+          const value = +counter.innerText;
+          const increment = target / speed;
+
+          if (value < target) {
+            counter.innerText = Math.ceil(value + increment);
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.innerText = target + "+";
+          }
+        };
+
+        updateCounter();
+      });
+    }
+
+    // Trigger when element is visible
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) startCounter();
+    });
+
+    observer.observe(document.querySelector(".stats"));
+  </script>
 
   <script>
     const btn = document.getElementById("goTopBtn");

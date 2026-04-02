@@ -146,19 +146,35 @@ body {
 
 .stats {
     display: flex;
+    justify-content: center;
     gap: 40px;
-    font-size: 16px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    text-align: center;
 }
 
-.stats div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.stat strong {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #111;
 }
 
-.stats strong {
-    font-size: 24px;
-    color: #0f172a;
+.stat span {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 600px) {
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat strong {
+        font-size: 2rem;
+    }
 }
 
 .image-content {
@@ -176,7 +192,7 @@ body {
 .about-info-card-mobile {
     background-color: white;
     border-radius: 1rem;
-    padding: .8rem;
+    padding: 1rem;
     margin-block-end: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -184,7 +200,10 @@ body {
 .about-info-card-mobile .label {
     margin-inline-end: .2rem;
     color: #6c757d;
+    margin: 0;
 }
+
+.about-info-card-mobile .data {}
 
 .about-info h3 {
     color: #0f172a;
